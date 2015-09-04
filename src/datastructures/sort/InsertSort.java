@@ -1,6 +1,4 @@
 package datastructures.sort;
-import datastructures.sort.randomArray;
-import datastructures.sort.print;
 /* 直接插入排序
  * 某数与前面i个有序序列从后往前进行比较，自身小则将其后移，否则插入其后，即找到比自己小的插在后面 O(n^2)
  * 1.视data[0]为第一个数据，形成一个有序序列
@@ -18,14 +16,14 @@ public class InsertSort {
 				j--;
 			}
 			data[j+1] = tmp;				//满足时插入至已经移好的位置
-			print.print(data);
+			Util.print(data);
 		}
 		
 		
 	}
 	public static void main(String[] args) {
-		int[] data = randomArray.getRandomArray(10);
-		print.print(data);
+		int[] data = Util.getRandomArray(10);
+		Util.print(data);
 		insertSort(data);
 	}
 
