@@ -22,6 +22,7 @@ public class Util {
 
 	public static void swap(int[] data, int i, int j) {
 		if (i == j) {
+			//若i=j则操作数为0
 			return;
 		}
 		data[i] = data[i] + data[j];
