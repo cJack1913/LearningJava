@@ -4,8 +4,8 @@ package classinit;
  * 程序先试图访问Beetle.main()方法，于是开始加载Beetle
  * 1.尝试加载当前类
  * 2.若存在父类则尝试加载父类（*）
- * 3.根基类中的static初始化
- * 4.子类的static初始化
+ * 3.根基类中的static初始化(包含块)
+ * 4.子类的static初始化(包含块)
  * 此时所有的相关类加载完毕
  * 
  * main()方法执行，遇到new时进行对象创建
@@ -46,7 +46,7 @@ class Insect extends father{
 	}
 }
 public class Beetle extends Insect{
-	int d = 3;
+	int d = 1;
 	private int k = printInit("Beetle.k initialized");
 	{System.out.println("block Beetle initialized");}
 	
@@ -60,7 +60,7 @@ public class Beetle extends Insect{
 	private static int x2 = printInit("static Beetle.x2 initialized");
 	
 	public static void main(String[] args) {
-		System.out.println("Beetle constructor");
+		System.out.println("main continue");
 		Beetle b = new Beetle();
 	}
 }
