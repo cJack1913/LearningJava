@@ -1,4 +1,4 @@
-package datastructures.sort;
+package Util;
 
 import java.util.Random;
 
@@ -18,6 +18,19 @@ public class Util {
 			System.out.print(i + "\t");
 		}
 		System.out.println();
+	}
+	
+	public static void printLinkedList(ListNode head) {
+		if(null == head){
+			System.out.println("empty");
+			return;
+		}
+		ListNode tmp = head;
+		while(tmp.getNext()!=null){
+			System.out.print(tmp.getValue()+" ");
+			tmp = tmp.getNext();
+		}
+		System.out.println(tmp.getValue());
 	}
 
 	public static void swap(int[] data, int i, int j) {

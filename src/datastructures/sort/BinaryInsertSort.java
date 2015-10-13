@@ -1,5 +1,7 @@
 package datastructures.sort;
 
+import Util.Util;
+
 /*
  * 与直接插入类似，只是与前序比较时采用折半查找法找到插入位置 O(n^2)
  * 以low为插入位置，比它小则low不变，插在low的位置，比它大则low+1，插在其后

@@ -1,4 +1,7 @@
 package datastructures.sort;
+
+import Util.Util;
+
 /*
  * 逐次向后比较，大则换 O(n^2)
  * 具有稳定性，这里的稳定性是指原序列中相同元素的相对顺序仍然保持到排序后的序列，而堆排序、快速排序均不具有稳定性。

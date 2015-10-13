@@ -1,4 +1,7 @@
 package datastructures.sort;
+
+import Util.Util;
+
 /*
  * 快速排序，从待排序列中取一个数据(第一个)作为分界值，将小的放左边，大的放右边，直至长度为1 O(nlog2n)
  * 1.取第一个作为分界值mid = data[start]
